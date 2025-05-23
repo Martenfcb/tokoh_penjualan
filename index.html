@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Masuk - Tokoh Kacamata</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background: url('gambar/foto.jpg') no-repeat center center fixed;
+			background-size: cover;
+			font-family: 'Poppins', sans-serif;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+
+		.form-login {
+			background: rgba(1, 66, 66, 0.822);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			border-radius: 20px;
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			width: 100%;
+			max-width: 420px;
+			padding: 40px;
+			color: #dbea0a;
+			text-align: center;
+			animation: fadeIn 1s ease;
+		}
+
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(-20px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+
+		.form-login h3 {
+			font-weight: 700;
+			font-size: 2.5rem;
+			color: #ee0c0c;
+			text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+		}
+
+		.form-login h4 {
+			font-weight: 300;
+			font-size: 1.2rem;
+			margin-bottom: 30px;
+			color: #04ecf4;
+		}
+
+		.form-group input {
+			background: rgba(255,255,255,0.2);
+			border: none;
+			border-radius: 30px;
+			color: #fff;
+			padding: 15px;
+			font-size: 1.1rem;
+			transition: background 0.3s ease;
+		}
+
+		.form-group input::placeholder {
+			color: #eee;
+		}
+
+		.form-group input:focus {
+			background: rgba(255,255,255,0.3);
+			box-shadow: 0 0 5px rgba(255,255,255,0.4);
+		}
+
+		.btn {
+			border-radius: 30px;
+			padding: 12px 25px;
+			font-weight: 500;
+			font-size: 1rem;
+			margin: 10px 5px;
+			transition: all 0.3s ease;
+			width: 45%;
+		}
+
+		.btn-info {
+			background-color: #00c8ff;
+			border: none;
+			color: #fff;
+		}
+
+		.btn-info:hover {
+			background-color: #00a6d6;
+			transform: scale(1.05);
+		}
+
+		.btn-danger {
+			background-color: #ff4d4d;
+			border: none;
+			color: #fff;
+		}
+
+		.btn-danger:hover {
+			background-color: #cc0000;
+			transform: scale(1.05);
+		}
+
+		.footer {
+			text-align: center;
+			font-size: 0.9rem;
+			color: #eee;
+			margin-top: 20px;
+			text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+		}
+
+		@media screen and (max-width: 576px) {
+			.form-login {
+				padding: 30px 20px;
+			}
+			.btn {
+				width: 100%;
+				margin: 8px 0;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="form-login">
+		<h3>Tokoh Kacamata</h3>
+		<h4>Silakan login terlebih dahulu</h4>
+		<form action="aksi/aksi_masuk.php" method="POST">
+			<div class="form-group">
+				<input type="text" name="username" class="form-control" placeholder="Username" required autocomplete="off">
+			</div>
+			<div class="form-group">
+				<input type="password" name="password" class="form-control" placeholder="Password" required autocomplete="off">
+			</div>
+			<div class="form-group d-flex justify-content-center">
+				<button type="submit" class="btn btn-info">Masuk</button>
+				<button type="reset" class="btn btn-danger">Reset</button>
+			</div>
+		</form>
+		<div class="footer">
+			&copy; 2025 Tokoh Kacamata. All rights reserved.
+		</div>
+	</div>
+
+</body>
+</html>
